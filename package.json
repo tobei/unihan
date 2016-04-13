@@ -1,6 +1,6 @@
 {
   "name": "unihan",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JS friendly version of the Unihan unicode database",
   "main": "index.js",
   "scripts": {
