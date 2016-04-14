@@ -14,6 +14,9 @@ request('http://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip')
         entry.pipe(csv({delimiter: '\t', ignoreEmpty: true, comment: '#'}))
         .on('data', ([character, property, value, ...errors]) => {
             assert(errors.length == 0);
+            console.log(character.slice(2));
+            character = parseInt(character.slice(2)), 16;
+            console.log(character);
             console.log(value);
         })
     });
