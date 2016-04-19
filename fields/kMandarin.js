@@ -4,17 +4,17 @@ class kMandarin {
 
     constructor() {}
 
-    test(value) {
-        return this.pattern.test(value);
+
+
+    *parse(value) {
+        do {
+            yield this.pattern.exec(value);
+        } while(this.pattern.lastIndex < this.pattern.size - 1);
     }
 
-    parse(value) {
-        
-
-    }
 
     get pattern() {
-        return /^[a-z\u0300-\u0302\u0304\u0308\u030C]+$/u;
+        return /[a-z\u0300-\u0302\u0304\u0308\u030C]+/uy;
     }
 
     get field() {
