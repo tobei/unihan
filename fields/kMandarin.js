@@ -8,13 +8,14 @@ class kMandarin {
 
     *parse(value) {
         do {
-            yield this.pattern.exec(value);
-        } while(this.pattern.lastIndex < this.pattern.size - 1);
+            console.log(this.pattern.lastIndex + ' ' + value.length);
+            yield result[0].normalize('NFC');
+        } while(this.pattern.lastIndex < value.length - 1);
     }
 
 
     get pattern() {
-        return /[a-z\u0300-\u0302\u0304\u0308\u030C]+/uy;
+        return /[a-z\u0300-\u0302\u0304\u0308\u030C]+/gy;
     }
 
     get field() {

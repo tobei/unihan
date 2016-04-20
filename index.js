@@ -19,7 +19,7 @@ fs.createReadStream('unihan.zip')
                 if (property == 'kMandarin') {
                     //let val = kMandarin.test(value.normalize('NFC'));
                     //if (!val) {
-                    console.log([...kMandarin.parse(value)]);
+                    console.log([...kMandarin.parse(value.normalize('NFD'))]);
                     //}
                 }
             })
