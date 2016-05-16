@@ -19,8 +19,7 @@ class kMandarin {
             cn : readings[0],
             tw : readings.length > 1 ? readings[1] : readings[0]
         }
-
-        console.log(returnValue);
+        
         return returnValue;
     }
 }

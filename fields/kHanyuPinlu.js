@@ -22,11 +22,9 @@ class kHanyuPinlu {
             const value = previous || 0;
             return value + current.ratio;
         }
-
-        const occurences = readings.reduce(sum, 0)
-
+        const occurrences = readings.reduce(sum, 0)
         return readings.map(element => {
-            element.ratio = element.ratio / occurences;
+            element.ratio = element.ratio / occurrences;
             return element;
         });
 

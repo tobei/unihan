@@ -12,7 +12,7 @@ class kHanyuPinyin {
 
     values(value) {
         const readings = value.normalize('NFD').match(this.pattern).map(entry => {
-            entry.normalize('NFC').substring(entry.indexOf(':') + 1).split(',');
+            return entry.normalize('NFC').substring(entry.indexOf(':') + 1).split(',');
         });
         return readings;
     }

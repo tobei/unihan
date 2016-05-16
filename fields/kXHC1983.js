@@ -14,7 +14,6 @@ class kXHC1983 {
         const readings = value.normalize('NFD').match(this.pattern).map(entry => {
             return entry.normalize('NFC').substring(entry.indexOf(':') + 1);
         });
-        console.log(readings);
         return readings;
     }
 

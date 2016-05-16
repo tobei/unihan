@@ -12,7 +12,7 @@ class kDefinition {
 
     values(value) {
         const majorDefinitions = value.match(this.pattern)[0].split(';');
-        return majorDefinitions.map(majorDefinition => majorDefinition.split(','));
+        return majorDefinitions;
     }
 
 }
